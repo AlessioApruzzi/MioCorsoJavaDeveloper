@@ -1,4 +1,4 @@
-package listaInteri;
+/*package listaInteri;
 
 public class TestListaInteri {
 
@@ -17,3 +17,5 @@ public class TestListaInteri {
     }
 
 }
+
+ */

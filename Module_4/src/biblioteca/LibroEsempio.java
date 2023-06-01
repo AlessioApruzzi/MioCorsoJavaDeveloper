@@ -1,15 +1,15 @@
-package biblioteca;
+/* .   package biblioteca;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class Libro implements Comparable<Libro> {
+public class LibroEsempio implements Comparable<Libro> {
 
     private int index;
     private String author;
     private String name;
 
-    public Libro(int index, String author, String name) {
+    public LibroEsempio(int index, String author, String name) {
         this.index = index;
         this.author = author;
         this.name = name;
@@ -55,7 +55,7 @@ public class Libro implements Comparable<Libro> {
 
         // modo più standard e pulito per comparare un singolo campo
         // return Integer.compare(libro.getIndex(), this.getIndex());
-         */
+
 
         // e se volessimo comparare in base a più di un attributo?
         // ad esempio per ordinare prima in base all'index e in caso di uguaglianza anche in base all'autore
@@ -70,3 +70,5 @@ public class Libro implements Comparable<Libro> {
             return indexComparison;
     }
 }
+
+*/

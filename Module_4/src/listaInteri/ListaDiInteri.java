@@ -1,3 +1,4 @@
+/*
 package listaInteri;
 
 public class ListaDiInteri {
@@ -32,3 +33,6 @@ public class ListaDiInteri {
     }
 
 }
+
+
+ */
