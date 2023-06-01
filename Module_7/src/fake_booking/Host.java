@@ -1,10 +1,7 @@
 package fake_booking;
 
 import java.time.LocalDate;
-import java.util.LinkedHashSet;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 public class Host extends User{
     private UUID hostId;
@@ -19,12 +16,25 @@ public class Host extends User{
 
         super(nome, cognome, indirizzo, mail);
         hostId = UUID.randomUUID();
+        abitazioni= new HashSet<>();
+        prenotazioni= new LinkedHashSet<>();
+    }
 
+    public Host(){
+        abitazioni= new HashSet<>();
+        prenotazioni= new LinkedHashSet<>();
     }
 
   //  public Host() {
     //    super();
    // }
+
+    public void addPrenotazione(Prenotazione prenotazione){
+        prenotazioni.add(prenotazione);
+    }
+    public void addAbitazione(Abitazione abitazione){
+        abitazioni.add(abitazione);
+    }
 
     public UUID getHostId() {
         return hostId;
@@ -64,5 +74,15 @@ public class Host extends User{
 
     public void setSuperHost(boolean superHost) {
         this.superHost = superHost;
+    }
+
+    @Override
+    public String toString() {
+        return "Host{" +
+                "hostId=" + hostId +
+                ", abitazioni=" + abitazioni +
+                ", prenotazioni=" + prenotazioni +
+                ", superHost=" + superHost +
+                '}';
     }
 }

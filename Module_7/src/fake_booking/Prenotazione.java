@@ -11,16 +11,19 @@ public class Prenotazione {
     private LocalDate dataInizio;
     private LocalDate dataFine;
     private Abitazione abitazione;
-    private Utente utente;
+    private User utente;
     private double prezzo;
 
-    public Prenotazione(LocalDate dataInizio, LocalDate dataFine, Abitazione abitazione, Utente utente, double prezzo) {
+    public Prenotazione(LocalDate dataInizio, LocalDate dataFine, Abitazione abitazione, User utente, double prezzo) {
         this.dataInizio = dataInizio;
         this.dataFine = dataFine;
         this.abitazione = abitazione;
         this.utente = utente;
         prenotazioneId= UUID.randomUUID();
         this.prezzo=prezzo;
+        utente.addPrenotazione(this);
+
+
     }
 
     public UUID getPrenotazioneId() {
@@ -39,7 +42,7 @@ public class Prenotazione {
         return abitazione;
     }
 
-    public Utente getUtente() {
+    public User getUtente() {
         return utente;
     }
 
@@ -57,5 +60,16 @@ public class Prenotazione {
 
     public void setDataFine(LocalDate dataFine) {
         this.dataFine = dataFine;
+    }
+
+    @Override
+    public String toString() {
+        return "Prenotazione{" +
+                "dataInizio=" + dataInizio +
+                ", dataFine=" + dataFine +
+                ", abitazione=" + abitazione +
+                ", utente=" + utente +
+                ", prezzo=" + prezzo +
+                '}';
     }
 }

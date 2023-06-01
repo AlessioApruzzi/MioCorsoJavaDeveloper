@@ -1,5 +1,6 @@
 package fake_booking;
 
+import java.time.Period;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -19,9 +20,11 @@ public class User {
         this.indirizzo = indirizzo;
         this.mail = mail;
         userId= UUID.randomUUID();
+        prenotazioni = new LinkedHashSet<>();
     }
 
     public User() {
+        prenotazioni= new LinkedHashSet<>();
     }
 
     public String getNome() {
@@ -57,5 +60,22 @@ public class User {
     }
     public void removePrenotazione(Prenotazione prenotazione){
         prenotazioni.remove(prenotazione);
+    }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                "giorni prenotazioni" + getDaysOfPrenotazioniLastMOntByUser();
+    }
+
+    public int getDaysOfPrenotazioniLastMOntByUser(){
+        int counter=0;
+        for (Prenotazione prenotazione : prenotazioni) {
+            counter += Period.between(prenotazione.getDataInizio(), prenotazione.getDataFine()).getDays();
+        }
+        return counter;
     }
 }

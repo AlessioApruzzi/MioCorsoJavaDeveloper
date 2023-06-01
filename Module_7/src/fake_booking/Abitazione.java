@@ -79,4 +79,17 @@ public class Abitazione {
     public int hashCode() {
         return Objects.hash(abitazioneId);
     }
+
+    @Override
+    public String toString() {
+        return "Abitazione{" +
+                "nome='" + nome + '\'' +
+                ", indirizzo='" + indirizzo + '\'' +
+                ", numeroLocali=" + numeroLocali +
+                ", postiLetto=" + postiLetto +
+                ", piano=" + piano +
+                ", dataInizioPrenotabilita=" + dataInizioPrenotabilita +
+                ", dataFinePrenotabilita=" + dataFinePrenotabilita +
+                '}';
+    }
 }
