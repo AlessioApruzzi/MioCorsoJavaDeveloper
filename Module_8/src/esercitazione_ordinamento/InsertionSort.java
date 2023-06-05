@@ -84,10 +84,13 @@ public class InsertionSort {
 
         /*
         **** Test Insertion sort randomico ****
-        Array di 100: 50459 nanosecondi
-        Array di 1000: 3291500 nanosecondi
-        Array di 100000: 603743917 nanosecondi
-         */
+        Array di 100: 58250 nanosecondi
+        Lista di 100: 2245542 nanosecondi
+        Array di 1000: 3164000 nanosecondi
+        Lista di 1000: 10443042 nanosecondi
+        Array di 100000: 497842834 nanosecondi
+        Lista di 100000: 15117789792 nanosecondi
+        */
 
 
         System.out.println("\n**** Test Insertion sort ordinato ****");
@@ -133,9 +136,12 @@ public class InsertionSort {
 
         /*
         **** Test Insertion sort ordinato ****
-        Array di 100: 3083 nanosecondi
-        Array di 1000: 1500 nanosecondi
-        Array di 100000: 122875 nanosecondi
+        Array di 100: 750 nanosecondi
+        Lista di 100: 12875 nanosecondi
+        Array di 1000: 1542 nanosecondi
+        Lista di 1000: 237250 nanosecondi
+        Array di 100000: 131292 nanosecondi
+        Lista di 100000: 1465987584 nanosecondi
         */
 
 
@@ -188,9 +194,12 @@ public class InsertionSort {
 
         /*
         **** Test Insertion sort contrordinato  ****
-        Array di 100: 2750 nanosecondi
-        Array di 1000: 102583 nanosecondi
-        Array di 100000: 967898917 nanosecondi
+        Array di 100: 3167 nanosecondi
+        Lista di 100: 32125 nanosecondi
+        Array di 1000: 103167 nanosecondi
+        Lista di 1000: 2777709 nanosecondi
+        Array di 100000: 938293250 nanosecondi
+        Lista di 100000: 28316259041 nanosecondi
         */
     }
 
