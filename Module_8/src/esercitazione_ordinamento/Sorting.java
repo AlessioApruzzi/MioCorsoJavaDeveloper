@@ -20,30 +20,42 @@ public class Sorting {
         List<Integer> listaMille = new ArrayList<>(1000);
         List<Integer> listaCentoMila = new ArrayList<>(100000);
 
+        int[] arrayCentoTemp= new int[100];
+        int[] arrayMilleTemp= new int[1000];
+        int[] arrayCentoMilaTemp= new int[100000];
+        List<Integer> listaCentoTemp = new ArrayList<>(100);
+        List<Integer> listaMilleTemp = new ArrayList<>(1000);
+      //  List<Integer> listaCentoMilaTemp = new ArrayList<>(100000);
+
         //Creazione di un array e una lista di 100 interi randomici
         for (int i = 0; i < arrayCento.length; i++) {
             arrayCento[i] = (int) (Math.random() * 100);
+            arrayCentoTemp[i]=arrayCento[i];
             listaCento.add((int) (Math.random() * 100));
+            listaCentoTemp.add(listaCento.get(i));
         }
 
         //Creazione di un array e una lista di 1000 interi randomici
         for (int i = 0; i < arrayMille.length; i++) {
             arrayMille[i] = (int) (Math.random() * 100);
+            arrayMilleTemp[i]=arrayMille[i];
+
             listaMille.add((int) (Math.random() * 100));
+            listaMilleTemp.add(listaMille.get(i));
+
         }
 
         //Creazione di un array e una lista di 1000000 interi randomici
         for (int i = 0; i < arrayCentoMila.length; i++) {
             arrayCentoMila[i] = (int) (Math.random() * 100);
+            arrayCentoMilaTemp[i]=arrayCentoMila[i];
+
             listaCentoMila.add((int) (Math.random() * 100));
+          //  listaCentoMilaTemp.add(listaCentoTemp.get(i));
+
         }
 
-        int[] arrayCentoTemp= arrayCento;
-        int[] arrayMilleTemp= arrayMille;
-        int[] arrayCentoMilaTemp= arrayCentoMila;
-        List<Integer> listaCentoTemp = listaCento;
-        List<Integer> listaMilleTemp = listaMille;
-        List<Integer> listaCentoMilaTemp = listaCentoMila;
+
 
         System.out.println("\n**** Random order sorting ****");
         System.out.println("** 100 numbers **    ");
@@ -317,7 +329,7 @@ public class Sorting {
 
     public static void bubbleSort(int[] array) {
         int temp;
-        int counter= 0;
+        long counter= 0;
         for (int i = 0; i < array.length-1; i++) {
             for (int j = 0; j < array.length -1 - i; j++) {
                 if (array[j]>array[j+1]) {
@@ -328,32 +340,41 @@ public class Sorting {
                 }
             }
         }
-        // System.out.println(counter);
+         System.out.print(counter + " Iterations for ");
     }
 
     public static void bubbleSort(List<Integer> lista) {
         int temp;
+        long counter= 0;
+
         for (int i = 0; i < lista.toArray().length-1; i++) {
             for (int j = 0; j < lista.toArray().length -1 - i; j++) {
                 if (lista.get(j)>lista.get(j+1)) {
                     Collections.swap(lista,j,j+1);
+                    counter++;
                 }
             }
         }
+        System.out.print(counter + " Iterations for ");
+
     }
 
     public static void insertionSort(int[] array) {
+        long counter= 0;
         for(int i = 1; i < array.length; i++) {
             int temp = array[i];
             int j = i - 1;
             while (j >= 0 && array[j] > temp) {
                 array[j + 1] = array[j];
                 j = j - 1;
+                counter++;
             }
             array[j+1] = temp;
         }
+        System.out.print(counter + " Iterations for ");
     }
     public static void insertionSort(List<Integer> lista) {
+        long counter= 0;
         for(int i = 1; i < lista.toArray().length; i++) {
             int temp = lista.get(i);
             int j = i - 1;
@@ -361,9 +382,10 @@ public class Sorting {
                 //  lista.add(j+1,lista.get(j));
                 Collections.swap(lista,j+1,j);
                 j = j - 1;
+                counter++;
             }
-            //lista.add(j+1,temp);
         }
+        System.out.print(counter + " Iterations for ");
     }
 
 
