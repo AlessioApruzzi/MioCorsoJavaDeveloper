@@ -373,6 +373,8 @@ public class Sorting {
         }
         System.out.print(counter + " Iterations for ");
     }
+
+
     public static void insertionSort(List<Integer> lista) {
         long counter= 0;
         for(int i = 1; i < lista.toArray().length; i++) {
