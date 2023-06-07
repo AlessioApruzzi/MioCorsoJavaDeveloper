@@ -14,7 +14,7 @@ public class Restaurant {
     private List<Order> orders;
 
     public Restaurant(){
-        menu = new Menu();
+        menu = new Menu(this);
         orders=new ArrayList<>();
     }
 

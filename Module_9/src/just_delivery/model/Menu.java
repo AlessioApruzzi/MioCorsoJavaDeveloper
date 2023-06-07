@@ -18,11 +18,13 @@ import java.util.Set;
 public class Menu {
 
     private Set<Product> products;
-    private static File menu;
+   // private static File menu;
     private Restaurant restaurant;
 
-    public Menu(){
+    public Menu(Restaurant restaurant){
         products= new HashSet<>();
+        this.restaurant=restaurant;
+
         //String filePath = "Module_9/src/just_delivery/resources";
         //Path path = Paths.get("Module_9","src","just_delivery","resources");
         //createMenu(filePath);
@@ -30,6 +32,15 @@ public class Menu {
     }
 
 
+    public void addProdotto(Product product){
+        products.add(product);
+    }
+
+    public void printMenu(){
+        for (Product product : products) {
+            System.out.println(product);
+        }
+    }
 
   /*  public void createMenu(String path){
 
@@ -58,15 +69,7 @@ public class Menu {
 
    */
 
-    public void addProdotto(Product product){
-        products.add(product);
-    }
 
-    public void printMenu(){
-        for (Product product : products) {
-            System.out.println(product);
-        }
-    }
 
 }
 
