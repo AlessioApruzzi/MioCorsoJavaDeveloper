@@ -17,21 +17,21 @@ import java.util.Set;
 @AllArgsConstructor
 public class Menu {
 
-    private Set<Product> prodotti;
+    private Set<Product> products;
     private static File menu;
     private Restaurant restaurant;
 
     public Menu(){
-        prodotti= new HashSet<>();
-        String filePath = "Module_9/src/just_delivery/resources";
+        products= new HashSet<>();
+        //String filePath = "Module_9/src/just_delivery/resources";
         //Path path = Paths.get("Module_9","src","just_delivery","resources");
-        createMenu(filePath);
+        //createMenu(filePath);
 
     }
 
 
 
-    public void createMenu(String path){
+  /*  public void createMenu(String path){
 
         String pathNew = path+"/"+restaurant.getNome() ;
         menu = new File(pathNew);
@@ -42,7 +42,9 @@ public class Menu {
         }
     }
 
-    public void addProdotto(String path, Product product){
+   */
+
+  /*  public void addProdotto(String path, Product product){
         prodotti.add(product);
         try (BufferedWriter bw = Files.newBufferedWriter(Paths.get(path), StandardOpenOption.APPEND)) {
             bw.write(product.toString());
@@ -52,6 +54,18 @@ public class Menu {
             e.printStackTrace();
         }
 
+    }
+
+   */
+
+    public void addProdotto(Product product){
+        products.add(product);
+    }
+
+    public void printMenu(){
+        for (Product product : products) {
+            System.out.println(product);
+        }
     }
 
 }

@@ -9,13 +9,14 @@ public class Product {
 
     private String nome;
     private CuisineType cuisineType;
-
+    private double prezzo;
 
 
     @Override
     public String toString() {
-        return "Prodotto{" +
+        return "Product{" +
                 "nome='" + nome + '\'' +
+                ", prezzo=" + prezzo +
                 '}';
     }
 }
