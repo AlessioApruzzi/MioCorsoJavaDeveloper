@@ -19,11 +19,11 @@ public class Menu {
 
     private Set<Product> products;
    // private static File menu;
-    private Restaurant restaurant;
+ //   private Restaurant restaurant;
 
-    public Menu(Restaurant restaurant){
+    public Menu(){
         products= new HashSet<>();
-        this.restaurant=restaurant;
+  //      this.restaurant=restaurant;
 
         //String filePath = "Module_9/src/just_delivery/resources";
         //Path path = Paths.get("Module_9","src","just_delivery","resources");
@@ -32,7 +32,7 @@ public class Menu {
     }
 
 
-    public void addProdotto(Product product){
+    public void addProduct(Product product){
         products.add(product);
     }
 
@@ -40,6 +40,15 @@ public class Menu {
         for (Product product : products) {
             System.out.println(product);
         }
+    }
+
+    public Product getProductByName(String name){
+        for (Product product : products) {
+            if (product.getNome().equals(name)){
+                return product;
+            }
+        }
+        return null;
     }
 
   /*  public void createMenu(String path){

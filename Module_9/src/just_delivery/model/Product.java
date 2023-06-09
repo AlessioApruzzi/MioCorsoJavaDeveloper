@@ -12,6 +12,7 @@ public class Product {
     private double prezzo;
 
 
+
     @Override
     public String toString() {
         return "Product{" +

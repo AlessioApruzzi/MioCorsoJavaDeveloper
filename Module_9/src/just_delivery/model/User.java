@@ -7,10 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 @Getter
-@EqualsAndHashCode
+
 public class User {
 
-    @EqualsAndHashCode.Include
     private String name;
 
     private UUID id;
@@ -19,9 +18,13 @@ public class User {
 
 
 
-    public User(){
+    public User(String name){
         ordini= new ArrayList<>();
         id=UUID.randomUUID();
+    }
+
+    public void addOrdine(Order order){
+        ordini.add(order);
     }
 
 
