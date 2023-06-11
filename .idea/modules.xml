@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MioCorsoJavaDeveloper.iml" filepath="$PROJECT_DIR$/MioCorsoJavaDeveloper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module_11/Module_11.iml" filepath="$PROJECT_DIR$/Module_11/Module_11.iml" />
       <module fileurl="file://$PROJECT_DIR$/Module_1_to_2/Module_1_to_2.iml" filepath="$PROJECT_DIR$/Module_1_to_2/Module_1_to_2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Module_4/Module_4.iml" filepath="$PROJECT_DIR$/Module_4/Module_4.iml" />
       <module fileurl="file://$PROJECT_DIR$/Module_5/Module_5.iml" filepath="$PROJECT_DIR$/Module_5/Module_5.iml" />
