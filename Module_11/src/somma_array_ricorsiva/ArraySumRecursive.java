@@ -1,6 +1,5 @@
 package somma_array_ricorsiva;
 
-import javax.annotation.processing.Generated;
 import java.util.Arrays;
 
 

@@ -9,7 +9,7 @@ In particolare, implementare almeno i seguenti metodi:
 Potete utilizzare il seguente codice come test:
 
 ```java
-public class Main {
+public class andiamo_a_teatro.Main {
     public static void main(String[] args) {
         Libro[] books = new Libro[]{
                 new Libro(123, "Luciana Litizzetto", "I dolori del giovane Programmatore"),
